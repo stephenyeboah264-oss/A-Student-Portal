@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal | {{ student.first_name }} {{ student.last_name }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="page-card">
+  <header class="navbar">
+    <a href="{{ url_for('index') }}" class="navbar-logo">Student<span>Portal</span></a>
+    <nav class="navbar-links">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('form') }}">Get Started</a>
+    </nav>
+  </header>
+
+  <main class="details-section" data-student-id="{{ student.id }}">
+    <div class="details-photo-card">
+      {% if student.image_filename %}
+        <img src="{{ url_for('static', filename='uploads/' + student.image_filename) }}" alt="{{ student.first_name }}">
+      {% else %}
+        <div class="photo-placeholder">No Image</div>
+      {% endif %}
+      <h2>{{ student.first_name }} {{ student.last_name }}</h2>
+      <span class="status-badge status-{{ student.admission_status }}" id="status-badge">{{ student.admission_status }}</span>
+    </div>
+
+    <div class="details-info">
+      <h3 class="details-subheading">Personal Information</h3>
+      <p><strong>Email:</strong> {{ student.email }}</p>
+      <p><strong>Gender:</strong> {{ student.gender }}</p>
+      <p><strong>Phone Number:</strong> {{ student.phone }}</p>
+      <p><strong>Date of Birth:</strong> {{ student.dob }}</p>
+      <p><strong>Address:</strong> {{ student.address }}</p>
+
+      <h3 class="details-subheading">Other Information</h3>
+      <p><strong>State of Origin:</strong> {{ student.state }}</p>
+      <p><strong>Local Government:</strong> {{ student.lga }}</p>
+
+      <h3 class="details-subheading">Academics Related Information</h3>
+      <p><strong>Next of Kin:</strong> {{ student.next_of_kin }}</p>
+      <p><strong>WASSCE Aggregate:</strong> {{ student.wassce_aggregate }}</p>
+      <p>
+        <strong>Status:</strong> <span id="current-status">{{ student.admission_status }}</span>
+        &nbsp;&nbsp;
+        <strong>Change Status:</strong>
+        <select id="change-status">
+          <option value="">Change Status</option>
+          <option value="admitted">Admitted</option>
+          <option value="rejected">Rejected</option>
+          <option value="undecided">Undecided</option>
+        </select>
+        <span id="status-message"></span>
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>All rights reserved &copy; Student Portal 2026</p>
+  </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

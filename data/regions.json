@@ -1,0 +1,18 @@
+{
+  "Greater Accra": ["Accra Metropolitan", "Tema Metropolitan", "Ga West", "Ga East", "Ledzokuku"],
+  "Ashanti": ["Kumasi Metropolitan", "Obuasi Municipal", "Ejisu Municipal", "Bosomtwe", "Asante Akim North"],
+  "Bono": ["Sunyani Municipal", "Berekum East", "Dormaa Central", "Wenchi Municipal", "Jaman North"],
+  "Bono East": ["Techiman Municipal", "Kintampo North", "Nkoranza South", "Atebubu-Amantin", "Pru East"],
+  "Ahafo": ["Goaso Municipal", "Asunafo North", "Asutifi North", "Tano North", "Tano South"],
+  "Western": ["Sekondi-Takoradi Metropolitan", "Ahanta West", "Shama", "Nzema East", "Ellembelle"],
+  "Western North": ["Sefwi Wiawso Municipal", "Bibiani-Anhwiaso-Bekwai", "Juaboso", "Bodi", "Aowin"],
+  "Central": ["Cape Coast Metropolitan", "Awutu Senya East", "Komenda-Edina-Eguafo-Abirem", "Mfantsiman", "Agona West"],
+  "Eastern": ["New Juaben South", "Akuapim North", "Suhum Municipal", "Kwahu West", "Fanteakwa South"],
+  "Volta": ["Ho Municipal", "Keta Municipal", "Hohoe Municipal", "Adaklu", "Akatsi South"],
+  "Oti": ["Dambai", "Krachi East", "Nkwanta South", "Jasikan", "Kadjebi"],
+  "Northern": ["Tamale Metropolitan", "Savelugu Municipal", "Sagnarigu Municipal", "Yendi Municipal", "Kumbungu"],
+  "Savannah": ["Damongo", "Bole", "Salaga North", "Sawla-Tuna-Kalba", "East Gonja"],
+  "North East": ["Nalerigu", "West Mamprusi", "Yunyoo-Nasuan", "Chereponi", "Bunkpurugu-Nyakpanduri"],
+  "Upper East": ["Bolgatanga Municipal", "Bawku Municipal", "Kassena Nankana", "Talensi", "Builsa North"],
+  "Upper West": ["Wa Municipal", "Jirapa Municipal", "Lawra Municipal", "Nadowli-Kaleo", "Sissala East"]
+}

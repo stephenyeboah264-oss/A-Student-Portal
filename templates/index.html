@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal | Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="page-card">
+  <header class="navbar">
+    <a href="{{ url_for('index') }}" class="navbar-logo">UENR<span>Portal</span></a>
+    <nav class="navbar-links">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('form') }}">Get Started</a>
+    </nav>
+  </header>
+
+  <main class="intro-section">
+    <div class="intro-text">
+      <h1>Student Main Portal</h1>
+      <p>Unlock student portal registration, join us today for your admission process.</p>
+      <a href="{{ url_for('form') }}" class="cta-button">Get Started</a>
+    </div>
+
+    <div class="intro-image">
+     <img src="{{ url_for('static', filename='image file/intro.png') }}" alt="student portal">
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>All rights reserved &copy; Student Portal 2026</p>
+  </footer>
+</div>
+
+</body>
+</html>

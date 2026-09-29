@@ -1,0 +1,370 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #2b2b2b;
+  background-color: #f4f0fb;
+  display: flex;
+  justify-content: center;
+  padding: 30px 10px;
+}
+.page-card {
+  width: 100%;
+  max-width: 900px;
+  border: 2px solid #5B3FD6;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(91, 63, 214, 0.15);
+}
+
+.page-card .navbar,
+.page-card .footer {
+  border-radius: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5B3FD6;
+  padding: 16px 32px;
+}
+
+.navbar-logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.navbar-logo span {
+  color: #FFA500;
+}
+
+.navbar-links a {
+  color: #ffffff;
+  margin-left: 24px;
+  font-size: 0.95rem;
+}
+
+.navbar-links a:hover {
+  color: #FFD166;
+}
+
+
+.footer {
+  background-color: #5B3FD6;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px;
+  font-size: 0.85rem;
+}
+
+.intro-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  gap: 40px;
+}
+
+.intro-text {
+  max-width: 350px;
+}
+
+.intro-text h1 {
+  font-size: 2.4rem;
+  color: #5B3FD6;
+  margin-bottom: 16px;
+}
+
+.intro-text p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #5B3FD6;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #4630a8;
+}
+
+.intro-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.form-section {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #DCEEF7;
+  border-radius: 8px;
+}
+
+.form-section h1 {
+  text-align: center;
+  color: #5B3FD6;
+}
+
+.form-instruction {
+  text-align: center;
+  color: #b02a37;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.form-subheading {
+  background-color: #3d3d3d;
+  color: #ffffff;
+  padding: 8px 12px;
+  margin: 20px 0 16px;
+  font-size: 0.95rem;
+}
+
+.flash-messages {
+  background-color: #ffe0e0;
+  border: 1px solid #d9534f;
+  color: #a94442;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 180px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #b8d2de;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+}
+
+.radio-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.radio-inline {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 6px;
+  font-weight: normal !important;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #3d3d3d;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #222;
+}
+
+
+.students-section {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.info-banner {
+  background-color: #DCEEF7;
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-bar input,
+.search-bar select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.search-bar button {
+  background-color: #2a7de1;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.students-table {
+  border: 1px solid #ccc;
+}
+
+.students-table th,
+.students-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.students-table th {
+  border-bottom: 2px solid #999;
+}
+
+.students-table th {
+  background-color: #f5f5f5;
+  color: #444;
+}
+
+.view-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background-color: #2a7de1;
+  border-radius: 6px;
+  transition: background-color 0.15s ease;
+}
+
+.no-records {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.status-admitted { background-color: #d4edda; color: #155724; }
+.status-rejected { background-color: #f8d7da; color: #721c24; }
+.status-undecided { background-color: #cfe2ff; color: #084298; }
+
+
+.details-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.details-photo-card {
+  background-color: #E8944A;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 220px;
+}
+
+.details-photo-card img,
+.photo-placeholder {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.details-subheading {
+  background-color: #DCEEF7;
+  padding: 8px 12px;
+  margin: 16px 0 10px;
+  font-size: 0.9rem;
+}
+
+.details-info p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+#status-message {
+  font-size: 0.85rem;
+  margin-left: 8px;
+}
+
+@media (max-width: 600px) {
+  .navbar-links a {
+    margin-left: 12px;
+    font-size: 0.85rem;
+  }
+  .intro-text h1 {
+    font-size: 1.8rem;
+  }
+}

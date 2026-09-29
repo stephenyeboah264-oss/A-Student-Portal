@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal | All Students</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="page-card">
+  <header class="navbar">
+    <a href="{{ url_for('index') }}" class="navbar-logo">Student<span>Portal</span></a>
+    <nav class="navbar-links">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('form') }}">Get Started</a>
+    </nav>
+  </header>
+
+  <main class="students-section">
+    <div class="info-banner">Info! All students records table</div>
+
+    <form class="search-bar" action="{{ url_for('students') }}" method="GET">
+      <input type="text" name="name" placeholder="Search Record By Name Only" value="{{ request.args.get('name', '') }}">
+      <select name="status">
+        <option value="">Select Admission Status</option>
+        <option value="admitted" {% if request.args.get('status') == 'admitted' %}selected{% endif %}>Admitted</option>
+        <option value="rejected" {% if request.args.get('status') == 'rejected' %}selected{% endif %}>Rejected</option>
+        <option value="undecided" {% if request.args.get('status') == 'undecided' %}selected{% endif %}>Undecided</option>
+      </select>
+      <select name="gender">
+        <option value="">Select Gender</option>
+        <option value="male" {% if request.args.get('gender') == 'male' %}selected{% endif %}>Male</option>
+        <option value="female" {% if request.args.get('gender') == 'female' %}selected{% endif %}>Female</option>
+      </select>
+      <input type="number" name="wassce_aggregate" placeholder="Enter WASSCE Aggregate" value="{{ request.args.get('wassce_aggregate', '') }}">
+      <button type="submit">Search</button>
+    </form>
+
+    <table class="students-table">
+      <thead>
+        <tr>
+          <th>S/N</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>WASSCE Aggregate</th>
+          <th>Admission Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in students %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ student.first_name }} {{ student.middle_name }} {{ student.last_name }}</td>
+          <td>{{ student.gender }}</td>
+          <td>{{ student.wassce_aggregate }}</td>
+          <td><span class="status-badge status-{{ student.admission_status }}">{{ student.admission_status }}</span></td>
+          <td>
+           <button onclick="location.href='{{ url_for('details', student_id=student.id) }}'" class="view-button">View</button>
+         </td>  
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="6" class="no-records">No student records found.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="footer">
+    <p>All rights reserved &copy; Student Portal 2026</p>
+  </footer>
+  </div>
+
+</body>
+</html>
